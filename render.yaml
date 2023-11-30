@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: test-1624
+    runtime: ruby
+    repo: https://github.com/render-examples/sinatra
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+      targetMemoryPercent: 1
+    buildCommand: bundle install
+    startCommand: bundle exec ruby main.rb
